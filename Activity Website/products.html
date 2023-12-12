@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="product.css">
+  <script src="product.js" defer></script>
+  <title>Adobe Products</title>
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">Adobe Products</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Back to Home Page</a>
+          </li>
+          <li class="nav-item">.-
+            <a class="nav-link" href="#">Twooo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Threee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Fourrr</a>
+          </li>
+        </ul>
+
+        <div id="cart-symbol" class="ml-2" onclick="showCart()" style="cursor: pointer;">
+          🛒
+          <span id="cart-badge" class="badge badge-pill badge-light">0</span>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+
+    <div id="notification" class="notification"></div>
+
+
+    <div id="product-container" class="row"></div>
+
+    <div id="cart-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="cart-modal-title"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cart-modal-title">Shopping Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul id="cart-items" class="list-group"></ul>
+            <p class="mt-2">Total: $<span id="cart-total">0.00</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" onclick="checkout()">Checkout</button>
+            <button type="button" class="btn btn-secondary" onclick="hideCart()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="product.js"></script>
+</body>
+
+</html>
